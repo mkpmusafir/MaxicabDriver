@@ -17,7 +17,7 @@
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:background="@color/lightbackcolor"
-            android:visibility="visible"
+            android:visibility="gone"
             android:weightSum="2">
 
             <TextView
@@ -200,7 +200,7 @@
                 </LinearLayout>
 
                 <TextView
-                    android:id="@+id/paymentMode"
+                    android:id="@+id/paymentMod"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:gravity=""
@@ -221,18 +221,18 @@
                     android:gravity="center">
 
                     <TextView
-                        android:id="@+id/remarkDriver"
+                        android:id="@+id/remarks_BTN"
                         android:layout_width="0dp"
                         android:layout_height="25dp"
                         android:layout_alignParentRight="true"
                         android:layout_marginRight="5dp"
                         android:background="@drawable/remarkbutton_shape"
                         android:gravity="center"
-                        android:text="Remark"
+                        android:text="Remarks"
                         android:layout_weight="1"
                         android:textColor="@android:color/white" />
                     <TextView
-                        android:id="@+id/allocatData"
+                        android:id="@+id/startjob_BTN"
                         android:layout_width="0dp"
                         android:layout_height="25dp"
                         android:layout_weight="1"
@@ -243,7 +243,7 @@
                         android:textColor="@android:color/white" />
 
                     <TextView
-                        android:id="@+id/copyData"
+                        android:id="@+id/finishjob_BTN"
                         android:layout_width="0dp"
                         android:layout_height="25dp"
                         android:layout_alignParentRight="true"
@@ -251,7 +251,7 @@
                         android:background="@drawable/stopbutton_shape"
                         android:gravity="center"
                         android:layout_weight="1"
-                        android:text="Stop Job"
+                        android:text="finish job"
                         android:layout_marginLeft="5dp"
                         android:textColor="@android:color/white" />
 
