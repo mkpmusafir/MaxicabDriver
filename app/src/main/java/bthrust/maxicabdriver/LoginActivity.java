@@ -1,7 +1,10 @@
 package bthrust.maxicabdriver;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
@@ -43,7 +46,9 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                loadDriverData(driverEmail.getText().toString() , driverPass.getText().toString());
+                Intent intent = new Intent(LoginActivity.this , HomeActivity.class);
+                startActivity(intent);
+               // loadDriverData(driverEmail.getText().toString() , driverPass.getText().toString());
             }
         });
     }
@@ -92,5 +97,24 @@ public class LoginActivity extends AppCompatActivity {
 
         RequestQueue requestQueue = Volley.newRequestQueue(LoginActivity.this);
         requestQueue.add(stringRequest);
+    }
+
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+
+        getMenuInflater().inflate(R.menu.logout_menu,menu);
+            return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()){
+            case R.id.logout_btn:
+
+                break;
+        }
+
+        return super.onOptionsItemSelected(item);
     }
 }

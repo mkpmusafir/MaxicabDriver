@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cardView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="1dp"
+    android:layout_marginBottom="1dp"
+    app:cardElevation="5dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/dateformat_section"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@color/lightbackcolor"
+            android:visibility="visible"
+            android:weightSum="2">
+
+            <TextView
+                android:id="@+id/dateFormat_Text"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.7"
+                android:drawableLeft="@drawable/ic_event_black"
+                android:drawablePadding="15dp"
+                android:gravity="center_vertical"
+                android:text="Date "
+                android:textSize="16dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/count_Text"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="2dp"
+                android:layout_weight=".2"
+                android:background="@drawable/circle_shape"
+                android:drawablePadding="15dp"
+                android:gravity="center"
+                android:text="3"
+                android:textColor="@color/lightbackcolor"
+                android:textSize="16dp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/list_section"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/dateformat_section"
+            android:orientation="horizontal"
+            android:visibility="visible">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="5dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/booking_ID"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="5dp"
+                        android:text="LT012354   :    "
+                        android:textColor="#000"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/bookingType"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Departure" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/address_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:drawableLeft="@drawable/ic_map"
+                    android:drawablePadding="5dp"
+                    android:text="Singapore Square Singapore    [ TO ]   36 Choa Chu Kang Loop Singapore "
+                    android:textColor="#000"
+                    android:textSize="16sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <TextView
+
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight=".7"
+                        android:paddingLeft="5dp"
+                        android:text="Pickup Date   :" />
+
+                    <TextView
+                        android:id="@+id/pickup_date"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="1.3"
+                        android:paddingLeft="5dp"
+                        android:text="23  Dec 2017 , 06:25 PM" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/driver_section"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:visibility="gone"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight=".7"
+                        android:paddingLeft="5dp"
+                        android:text="Diver Name    :" />
+
+                    <TextView
+                        android:id="@+id/driverName"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="1.3"
+                        android:paddingLeft="5dp"
+                        android:text="John" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/return_Section"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="Return Trip"
+                        android:textColor="#000"
+                        android:textSize="16sp" />
+
+
+                    <TextView
+                        android:id="@+id/return_Address_Text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:drawableLeft="@drawable/ic_flight_return"
+                        android:drawablePadding="5dp"
+                        android:text="Flight No :  SGT45878"
+                        android:visibility="visible"
+                        android:textColor="#000"
+                        android:textSize="16sp" />
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <TextView
+
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:layout_weight=".7"
+                            android:paddingLeft="5dp"
+                            android:text="Pickup Date   :" />
+
+                        <TextView
+                            android:id="@+id/Return_pickup_date"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:layout_weight="1.3"
+                            android:paddingLeft="5dp"
+                            android:text="23  Dec 2017 , 06:25 PM" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/paymentMode"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity=""
+                    android:paddingRight="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:text="SGD 55.00 Cash "
+                    android:textColor="#940707" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="10dp"
+                    android:weightSum="3"
+                    android:layout_marginLeft="35dp"
+                    android:layout_marginRight="35dp"
+                    android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/remarkDriver"
+                        android:layout_width="0dp"
+                        android:layout_height="25dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="5dp"
+                        android:background="@drawable/remarkbutton_shape"
+                        android:gravity="center"
+                        android:text="Remark"
+                        android:layout_weight="1"
+                        android:textColor="@android:color/white" />
+                    <TextView
+                        android:id="@+id/allocatData"
+                        android:layout_width="0dp"
+                        android:layout_height="25dp"
+                        android:layout_weight="1"
+                        android:layout_alignParentTop="true"
+                        android:background="@drawable/startbutton_shape"
+                        android:gravity="center"
+                        android:text="Start Job"
+                        android:textColor="@android:color/white" />
+
+                    <TextView
+                        android:id="@+id/copyData"
+                        android:layout_width="0dp"
+                        android:layout_height="25dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="5dp"
+                        android:background="@drawable/stopbutton_shape"
+                        android:gravity="center"
+                        android:layout_weight="1"
+                        android:text="Stop Job"
+                        android:layout_marginLeft="5dp"
+                        android:textColor="@android:color/white" />
+
+
+
+
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+</android.support.v7.widget.CardView>
