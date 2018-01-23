@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_login"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="bthrust.maxicabdriver.LoginActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:layout_gravity="center_vertical"
+        android:layout_marginRight="25dp"
+        android:layout_marginLeft="25dp"
+        android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="@drawable/circle_shape"
+        android:layout_marginBottom="40dp"
+        android:orientation="vertical">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:layout_margin="10dp"
+            android:src="@drawable/ic_drive_eta_black"/>
+    </RelativeLayout>
+
+        <EditText
+            android:id="@+id/driver_email_edit"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:inputType="textEmailAddress"
+            android:background="@drawable/edit_shape"
+            android:textSize="14sp"
+            android:drawableLeft="@drawable/ic_user"
+            android:paddingLeft="10dp"
+            android:drawablePadding="10dp"
+            android:hint="Email"/>
+        <EditText
+            android:id="@+id/driver_pass_edit"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:inputType="textPassword"
+            android:background="@drawable/edit_shape"
+            android:layout_marginTop="10dp"
+            android:textSize="14sp"
+            android:drawableLeft="@drawable/ic_password"
+            android:drawablePadding="10dp"
+            android:paddingLeft="10dp"
+            android:hint="Password"/>
+
+        <TextView
+            android:id="@+id/loginButton"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:background="@drawable/button_shape"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:textColor="@android:color/white"
+            android:text="LOGIN"/>
+    </LinearLayout>
+    </ScrollView>
+</LinearLayout>
