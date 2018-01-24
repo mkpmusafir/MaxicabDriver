@@ -1,15 +1,25 @@
 package bthrust.maxicabdriver;
 
+import android.content.BroadcastReceiver;
+import android.content.Context;
 import android.content.Intent;
+import android.content.IntentFilter;
+import android.os.BatteryManager;
+import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -28,6 +38,8 @@ import java.util.Map;
 public class LoginActivity extends AppCompatActivity {
 
     private EditText driverEmail  , driverPass;
+    private ImageView logo_layout;
+    Animation animRotate;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,19 +49,28 @@ public class LoginActivity extends AppCompatActivity {
 
          driverEmail = (EditText) findViewById(R.id.driver_email_edit);
          driverPass = (EditText) findViewById(R.id.driver_pass_edit);
+        logo_layout = (ImageView) findViewById(R.id.logo_layout);
 
         TextView loginButton = (TextView) findViewById(R.id.loginButton);
-
+        animRotate = AnimationUtils.loadAnimation(getApplicationContext(),
+                R.anim.rotate);
         loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                logo_layout.setAnimation(animRotate);
+                Log.e("dsafdsf==" , "sdfkjdfjdksf====");
 
-                Intent intent = new Intent(LoginActivity.this , HomeActivity.class);
-                startActivity(intent);
+              //  Intent intent = new Intent(LoginActivity.this , HomeActivity.class);
+              //  startActivity(intent);
                // loadDriverData(driverEmail.getText().toString() , driverPass.getText().toString());
             }
         });
+
+
+
+
     }
+
 
     private void loadDriverData(final String driver_Email, final String driver_Pass) {
 
